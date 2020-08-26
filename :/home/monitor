@@ -1,0 +1,3 @@
+root @home monitor crontab - l
+@daily /home/monitor/src/
+00 08,20 * * *  run /home/monitor/src/my_memory_check 
