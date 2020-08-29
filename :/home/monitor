@@ -1,8 +1,3 @@
-root @home monitor crontab - l
-@daily /home/monitor/src/
-00 08,20 * * *  run /home/monitor/src/my_memory_check 
-
-
 file { '/etc/Monitor':
   owner => 'root',
   group => 'root',
@@ -14,4 +9,9 @@ exec { 'tar -xf /home/monitor':
   path    => [/home/monitor',],
 }
 
+root @home monitor crontab - l
+
+@daily /home/monitor/src/
+
+00 08,20 * * *  run /home/monitor/src/my_memory_check 
 }
